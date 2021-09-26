@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+    background-image: url(cover3.PNG);
+    height:33vh;
+    background-size:cover;
+    background-position:center;
+}
+.fnt{
+    font-size: 2.1rem;
+    font-style: oblique;
+    color:#fff;
+    text-align: center;
+    margin-left: 35%;
+    
+}
+body{
+    background-color:rgba(168, 158, 158, 0.479);
+   background-image: url(cover.JPG);
+   background-repeat: no-repeat;
+   background-size:100%;
+}
+.wrapper{
+    max-width: 350px;
+                border-radius: 20px;
+                margin:auto;
+                background:rgba(0,0,0,0.8);
+                box-sizing: border-box;
+                padding: 40px;
+                color:#fff;
+                margin-top:100px;
+    
+}
+input[type=text]{
+    width: 100%;
+                padding: 12px 5px;
+                box-sizing: border-box;
+                background:rgba(0,0,0,0.10);
+                outline: none;
+                border: none;
+                border-bottom: 1px dotted #fff;
+                color:#fff;
+                border-radius: 5px;
+                margin: 5px;
+                font-weight: bold;
+}
+textarea
+{
+    width: 100%;
+                padding: 30px 5px;
+                box-sizing: border-box;
+                background:rgba(0,0,0,0.10);
+                outline: none;
+                border: none;
+                border-bottom: 1px dotted #fff;
+                color:#fff;
+                border-radius: 5px;
+                margin: 5px;
+                font-weight: bold;
+}
+input[type=submit]{
+                width:100%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                margin-top:30px;
+                outline: none;
+                border:none;
+                background:#60adde;
+                opacity: 0.7;
+                border-radius: 20px;
+                font-size: 20px;
+                color:#fff;
+            }
+            input[type=submit]:hover{
+                background-color: #003366;
+                opacity: 0.7;
+            }
+            a{
+                text-decoration: none;
+                color:#fff;
+            }
+</style>
+    <script language="javascript">
+        function validate()
+        {
+            email=document.contact.mail;
+            mssg=document.contact.Massege;
+
+            if(isEmpty(email,"Please Enter Active Email Address")==false)return false;
+             if(isEmpty(mssg,"Please Write Something")==false)return false;
+        }
+
+        function isEmpty(element,msg)
+			{
+				if(element.value=="")
+				{
+					alert(msg)
+					element.focus();return false;
+				}
+			}
+</script>
+    </head>
+    <body>
+        <header>
+        
+            
+                <div class="logo">
+                    <img src="logo1.png"/>
+                </div>
+                
+
+
+        </header>
+        
+        <br/><br>
+        <span class="fnt"><b>Type Feedbacks/Complaint/Massege</b></span>
+        <div class="wrapper">
+                <form name="contact">
+            <input type="text" name="mail" placeholder="Email:abc@gmail.com">
+            <textarea col="30" row="3" name="Massege" placeholder="Type.."></textarea>
+            <input type="submit" value="Submit" onclick="validate()">
+            <a href="index.html">Go to Home</a>
+        </form>
+            </div>
+            
+            </body>
+            
+</html>
